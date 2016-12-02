@@ -8,7 +8,7 @@ Created on Sun Nov 27 16:29:48 2016
 import numpy as np
 
 class MR:
-
+    ######################
     def __init__(self,major_filename,vias_vol,minor_filename = ""):
         self.major_filename = major_filename 
         self.vias_vol = vias_vol
@@ -22,6 +22,7 @@ class MR:
         self.output_resistance_back =[]
         go_or_not = True
         self.vias_vol = self.vias_vol * 0.001
+        #get datas
         while i < row_len:
             if(i > row_len / 2 ):
                 go_or_not = False
@@ -56,6 +57,7 @@ class MR:
         
         self.output_ratio_go = (self.output_resistance_go / self.Rp - 1) * 100
         self.output_ratio_back = (self.output_resistance_back / self.Rp - 1) * 100
+        # minor loop 
         if(minor_filename == ""):
             self.minor_exist_or_not = False
         else:
