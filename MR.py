@@ -8,7 +8,7 @@ Created on Sun Nov 27 16:29:48 2016
 import numpy as np
 
 class MR:
-    ######################
+
     def __init__(self,major_filename,vias_vol,minor_filename = ""):
         self.major_filename = major_filename 
         self.vias_vol = vias_vol
